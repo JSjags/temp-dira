@@ -65,7 +65,7 @@ const HowWeWork = () => {
                 Artificial Intelligence
               </p>
               <div className="mt-2">
-                {/* <svg
+                <svg
                   width="28"
                   height="17"
                   viewBox="0 0 28 17"
@@ -82,7 +82,7 @@ const HowWeWork = () => {
                     stroke="#7739CE"
                     strokeWidth="2"
                   />
-                </svg> */}
+                </svg>
               </div>
             </div>
             <div className="mx-auto w-[clamp(240px,calc(100%/3),360px)] grow">
@@ -97,7 +97,7 @@ const HowWeWork = () => {
                 Technological Advancement
               </p>
               <div className="mt-2">
-                {/* <svg
+                <svg
                   width="28"
                   height="17"
                   viewBox="0 0 28 17"
@@ -114,7 +114,7 @@ const HowWeWork = () => {
                     stroke="#0066FF"
                     strokeWidth="2"
                   />
-                </svg> */}
+                </svg>
               </div>
             </div>
             <div className="mx-auto w-[clamp(240px,calc(100%/3),360px)] grow">
@@ -129,7 +129,7 @@ const HowWeWork = () => {
                 Privacy policies
               </p>
               <div className="mt-2">
-                {/* <svg
+                <svg
                   width="28"
                   height="17"
                   viewBox="0 0 28 17"
@@ -146,7 +146,7 @@ const HowWeWork = () => {
                     stroke="#00F0FF"
                     strokeWidth="2"
                   />
-                </svg> */}
+                </svg>
               </div>
             </div>
           </div>

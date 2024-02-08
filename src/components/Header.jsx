@@ -60,8 +60,8 @@ const Header = () => {
         >
           {isMenuOpen ? (
             <svg
-              width="36"
-              height="36"
+              width="30"
+              height="30"
               viewBox="0 0 15 15"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,8 +75,8 @@ const Header = () => {
             </svg>
           ) : (
             <svg
-              width="40"
-              height="40"
+              width="30"
+              height="30"
               viewBox="0 0 15 15"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const Header = () => {
         </button>
         <div
           // You stoped here
-          className={`fixed top-20 left-0 w-full ${
+          className={`fixed top-16 left-0 w-full ${
             isMenuOpen ? "min-[900px]:block h-[110vh]  pb-20" : "h-0"
           } overflow-hidden transition-all duration-500 bg-wave bg-white z-10 flex flex-col items-center justify-around`}
         >

@@ -13,7 +13,7 @@ const Home = () => {
     <div className="pt-20 bg-wave w-full min-h-screen ">
       <Hero />
       <Research />
-      {/* <HowWeWork /> */}
+      <HowWeWork />
       <MeetTheTeam centerTitle={true} showSubtitle={true} />
       <ResearchWorks />
       <PressMentions />
