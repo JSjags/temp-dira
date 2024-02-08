@@ -2,7 +2,7 @@
 const Work = ({ data, isBlurred }) => {
   return (
     <div
-      className={`w-[clamp(200px,100%,17rem)] min-h-[18.5rem] grow cursor-pointer hover:opacity-100 transition-all duration-300 ${
+      className={`w-[clamp(200px,100%,16.5rem)] min-h-[18.5rem] grow cursor-pointer hover:opacity-100 transition-all duration-300 ${
         isBlurred ? "opacity-50" : ""
       }`}
     >

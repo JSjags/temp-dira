@@ -53,7 +53,7 @@ const HowWeWork = () => {
           </div>
 
           <div className="w-full flex flex-wrap gap-4 mt-20 center">
-            <div className="mx-auto w-[clamp(240px,calc(100%/3),367px)] max-h-[500px] grow">
+            <div className="mx-auto w-[clamp(240px,calc(100%/3),360px)] max-h-[500px] grow">
               <div className="w-full">
                 <img
                   src={HowWeWorkLeft}
@@ -85,7 +85,7 @@ const HowWeWork = () => {
                 </svg>
               </div>
             </div>
-            <div className="mx-auto w-[clamp(240px,calc(100%/3),367px)] grow">
+            <div className="mx-auto w-[clamp(240px,calc(100%/3),360px)] grow">
               <div className="w-full">
                 <img
                   src={HowWeWorkCenter}
@@ -117,7 +117,7 @@ const HowWeWork = () => {
                 </svg>
               </div>
             </div>
-            <div className="mx-auto w-[clamp(240px,calc(100%/3),367px)] grow">
+            <div className="mx-auto w-[clamp(240px,calc(100%/3),360px)] grow">
               <div className="w-full">
                 <img
                   src={HowWeWorkRight}
