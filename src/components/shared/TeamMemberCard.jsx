@@ -54,6 +54,7 @@ const TeamMemberCard = ({ data }) => {
                   animate={{ translateY: 0 }}
                   exit={{ translateY: "-30vh" }}
                   transition={{ type: "spring" }}
+                  className="w-full"
                 >
                   <TeamMemberCard data={data} />
                 </motion.div>
