@@ -22,7 +22,7 @@ const TeamMemberCard = ({ data }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed top-0 left-0 w-full h-full backdrop-blur-md z-20 overflow-y-scroll px-[clamp(10px,5%,100px)] bg-[rgba(0,0,0,0.3)]"
+            className="fixed overflow-hidden top-0 left-0 w-full h-full backdrop-blur-md z-20 overflow-y-scroll px-[clamp(10px,5%,100px)] bg-[rgba(0,0,0,0.3)]"
           >
             <button
               onClick={() => setShowMore(false)}
@@ -44,20 +44,12 @@ const TeamMemberCard = ({ data }) => {
               </svg>
             </button>
 
-            <div className="bg-white overflow-hidden max-w-[900px] mx-auto px-[clamp(10px,5%,100px)] py-8 shadow-lg rounded-3xl mt-16">
+            <div className="bg-white max-w-[900px] mx-auto px-[clamp(10px,5%,100px)] py-8 shadow-lg rounded-3xl mt-16">
               <div
                 // key={i}
                 className="flex justify-between flex-wrap w-full gap-16"
               >
-                <motion.div
-                  initial={{ translateY: "-30vh" }}
-                  animate={{ translateY: 0 }}
-                  exit={{ translateY: "-30vh" }}
-                  transition={{ type: "spring" }}
-                  className="w-full"
-                >
-                  <TeamMemberCard data={data} />
-                </motion.div>
+                <TeamMemberCard data={data} />
                 <div className="font-dmsans text-lg leading-8 min-w-[240px] flex-1 max-w-[922px]">
                   <p className="mt-0">
                     Lorem ipsum dolor sit amet consectetur. Non sapien elementum
