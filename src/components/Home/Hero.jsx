@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
         <div className="w-[40%] h-[1px] mt-4 bg-[#313131]" />
         <div className="mt-2 w-full flex justify-center">
-          <Link to={"/contact"}>
+          <Link to={"/contact"} className="w-full flex justify-center">
             <button
               aria-label="Join Us"
               className="block w-[100%] min-[827px]:w-40 h-12 bg-darkblue rounded-full font-poppins font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
