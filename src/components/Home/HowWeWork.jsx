@@ -1,9 +1,9 @@
 import plane from "../../assets/home/plane.svg";
 import plier from "../../assets/home/plier.svg";
 import mouse from "../../assets/home/mouse.svg";
-import HowWeWorkLeft from "../../assets/home/How-we-work-left.svg";
-import HowWeWorkCenter from "../../assets/home/How-we-work-center.svg";
-import HowWeWorkRight from "../../assets/home/How-we-work-right.svg";
+import HowWeWorkLeft from "../../assets/home/how-we-work-left.svg";
+import HowWeWorkCenter from "../../assets/home/how-we-work-center.svg";
+import HowWeWorkRight from "../../assets/home/how-we-work-right.svg";
 import { Link } from "react-router-dom";
 
 const HowWeWork = () => {
