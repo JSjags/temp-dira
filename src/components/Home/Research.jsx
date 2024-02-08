@@ -11,12 +11,12 @@ const Research = () => {
       <div className="relative mx-auto max-w-[1440px] flex flex-wrap justify-between items-center gap-6 px-[clamp(10px,5%,100px)] pt-28 pb-20">
         <img
           src={researchTopLeftStar}
-          className="absolute top-0 left-0 h-4/6"
+          className="absolute top-0 left-0 h-1/4 sm:h-4/6"
           loading="lazy"
         />
         <img
           src={researchBottomRightStar}
-          className="absolute bottom-0 right-0 h-4/6"
+          className="absolute bottom-0 right-0 h-1/4 sm:h-4/6"
           loading="lazy"
         />
         <div className="flex-1 min-[827px]:flex-[0.58] relative z-0">

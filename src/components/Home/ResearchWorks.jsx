@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import researchWorkBanner from "../../assets/home/research-work-banner.webp";
 import { researchWorks } from "../../constants/researchWorks";
 import { Work } from "../shared";
+import { Link } from "react-router-dom";
 
 const ResearchWorks = ({ isResearchPage }) => {
   let intervalId = useRef(null);
@@ -12,12 +13,10 @@ const ResearchWorks = ({ isResearchPage }) => {
   useEffect(() => {
     if (intervalId.current === null) {
       intervalId.current = setInterval(() => {
-        console.log(currentIndex);
         setCurrentIndex(currentIndex === 3 ? 0 : currentIndex + 1);
       }, 5000);
     } else {
       intervalId.current = setInterval(() => {
-        console.log(currentIndex);
         setCurrentIndex(currentIndex === 3 ? 0 : currentIndex + 1);
       }, 5000);
     }
@@ -73,14 +72,16 @@ const ResearchWorks = ({ isResearchPage }) => {
                     </span>
                   </p>
                   <div className="mt-12">
-                    <button
-                      aria-label="Discover more"
-                      className="h-12 border border-solid border-darkblue w-44 rounded-full font-poppins font-medium"
-                    >
-                      <span className="text-lg text-darkblue">
-                        Discover more
-                      </span>
-                    </button>
+                    <Link to={"/contact"}>
+                      <button
+                        aria-label="Discover more"
+                        className="h-12 border border-solid border-darkblue w-44 rounded-full font-poppins font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                      >
+                        <span className="text-lg text-darkblue">
+                          Discover more
+                        </span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

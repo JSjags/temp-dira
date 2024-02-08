@@ -19,7 +19,7 @@ const Footer = () => {
         </p>
         <div className="mt-4 h-[2px] w-[100px] mx-auto bg-black rounded-sm mb-6" />
         <div className="flex justify-between items-center h-fit mx-auto max-w-[673px]">
-          <ul className="flex flex-wrap justify-center w-full gap-3 font-medium text-darkblue text-xl">
+          <ul className="flex flex-wrap justify-center w-full gap-3 font-medium text-darkblue text-lg">
             <li className="px-3 relative after:content('') after:absolute after:-bottom-0 after:w-0 after:hover:w-1/2 after:block after:h-[2px] after:bg-darkblue after:rounded-sm after:transition-all after:duration-300 ">
               <Link to={"/"}>Home</Link>
             </li>
@@ -29,9 +29,9 @@ const Footer = () => {
             <li className="px-3 relative after:content('') after:absolute after:-bottom-0 after:w-0 after:hover:w-1/2 after:block after:h-[2px] after:bg-darkblue after:rounded-sm after:transition-all after:duration-300 ">
               <Link to={"/about"}>About Us</Link>
             </li>
-            <li className="px-3 relative after:content('') after:absolute after:-bottom-0 after:w-0 after:hover:w-1/2 after:block after:h-[2px] after:bg-darkblue after:rounded-sm after:transition-all after:duration-300 ">
+            {/* <li className="px-3 relative after:content('') after:absolute after:-bottom-0 after:w-0 after:hover:w-1/2 after:block after:h-[2px] after:bg-darkblue after:rounded-sm after:transition-all after:duration-300 ">
               <Link to={"/get-involved"}>Get Involved</Link>
-            </li>
+            </li> */}
             <li className="px-3 relative after:content('') after:absolute after:-bottom-0 after:w-0 after:hover:w-1/2 after:block after:h-[2px] after:bg-darkblue after:rounded-sm after:transition-all after:duration-300 ">
               <Link to={"/contact"}>Contact Us</Link>
             </li>
@@ -45,32 +45,57 @@ const Footer = () => {
           <ul className="flex flex-wrap justify-center gap-7 mt-12">
             <li>
               <Link to="https://www.facebook.com">
-                <img src={facebook} width={26} loading="lazy" />
+                <img
+                  src={facebook}
+                  width={26}
+                  loading="lazy"
+                  className="transition-all duration-300 hover:scale-110"
+                />
               </Link>
             </li>
             <li>
               <Link to="https://www.instagram.com">
-                <img src={instagram} width={26} loading="lazy" />
+                <img
+                  src={instagram}
+                  width={26}
+                  loading="lazy"
+                  className="transition-all duration-300 hover:scale-110"
+                />
               </Link>
             </li>
             <li>
               <Link to="https://www.whatsapp.com">
-                <img src={whatsapp} width={26} loading="lazy" />
+                <img
+                  src={whatsapp}
+                  width={26}
+                  loading="lazy"
+                  className="transition-all duration-300 hover:scale-110"
+                />
               </Link>
             </li>
             <li>
               <Link to="https://www.linkedin.com">
-                <img src={linkedin} width={26} loading="lazy" />
+                <img
+                  src={linkedin}
+                  width={26}
+                  loading="lazy"
+                  className="transition-all duration-300 hover:scale-110"
+                />
               </Link>
             </li>
             <li>
               <Link to="https://www.twitter.com">
-                <img src={twitter} width={26} loading="lazy" />
+                <img
+                  src={twitter}
+                  width={26}
+                  loading="lazy"
+                  className="transition-all duration-300 hover:scale-110"
+                />
               </Link>
             </li>
           </ul>
         </div>
-        <div className="mt-28 h-[1px] w-[80%] mx-auto bg-darkblue" />
+        <div className="mt-20 h-[1px] w-[80%] mx-auto bg-darkblue" />
         <p className="w-fit my-6 mx-auto text-sm font-normal text-darkblue text-center">
           Copyright © {new Date().getFullYear()} DiraLab. All rights reserved.
         </p>

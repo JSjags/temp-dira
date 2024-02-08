@@ -32,13 +32,13 @@ const Header = () => {
           >
             <Link to={"/research"}>Research</Link>
           </li>
-          <li
+          {/* <li
             className={
               pathname === "/get-involved" ? "text-[#0035E8]" : "text-lightdark"
             }
           >
             <Link to={"/get-involved"}>Get Involved</Link>
-          </li>
+          </li> */}
           <li
             className={
               pathname === "/contact" ? "text-[#0035E8]" : "text-lightdark"
@@ -47,11 +47,13 @@ const Header = () => {
             <Link to={"/contact"}>Contact Us</Link>
           </li>
         </ul>
-        <button className="hidden min-[900px]:flex">
-          <span className="font-poppins text-lg font-medium text-darkblue">
-            Get Started
-          </span>
-        </button>
+        <Link to={"/contact"}>
+          <button className="hidden min-[900px]:flex">
+            <span className="font-poppins text-lg font-medium text-darkblue">
+              Get Started
+            </span>
+          </button>
+        </Link>
         <button
           className="flex min-[900px]:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -100,23 +102,29 @@ const Header = () => {
             <li
               className={pathname === "/" ? "text-[#0035E8]" : "text-lightdark"}
             >
-              <Link to={"/"}>Home</Link>
+              <Link onClick={() => setIsMenuOpen(false)} to={"/"}>
+                Home
+              </Link>
             </li>
             <li
               className={
                 pathname === "/about" ? "text-[#0035E8]" : "text-lightdark"
               }
             >
-              <Link to={"/about"}>About Us</Link>
+              <Link onClick={() => setIsMenuOpen(false)} to={"/about"}>
+                About Us
+              </Link>
             </li>
             <li
               className={
                 pathname === "/research" ? "text-[#0035E8]" : "text-lightdark"
               }
             >
-              <Link to={"/research"}>Research</Link>
+              <Link onClick={() => setIsMenuOpen(false)} to={"/research"}>
+                Research
+              </Link>
             </li>
-            <li
+            {/* <li
               className={
                 pathname === "/get-involved"
                   ? "text-[#0035E8]"
@@ -124,20 +132,24 @@ const Header = () => {
               }
             >
               <Link to={"/get-involved"}>Get Involved</Link>
-            </li>
+            </li> */}
             <li
               className={
                 pathname === "/contact" ? "text-[#0035E8]" : "text-lightdark"
               }
             >
-              <Link to={"/contact"}>Contact Us</Link>
+              <Link onClick={() => setIsMenuOpen(false)} to={"/contact"}>
+                Contact Us
+              </Link>
             </li>
           </ul>
-          <button className="flex min-[900px]:hidden overflow-hidden">
-            <span className="font-poppins text-lg font-medium text-darkblue">
-              Get Started
-            </span>
-          </button>
+          <Link onClick={() => setIsMenuOpen(false)} to={"/contact"}>
+            <button className="flex min-[900px]:hidden overflow-hidden">
+              <span className="font-poppins text-lg font-medium text-darkblue">
+                Get Started
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

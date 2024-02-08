@@ -4,6 +4,7 @@ import mouse from "../../assets/home/mouse.svg";
 import HowWeWorkLeft from "../../assets/home/How-we-work-left.svg";
 import HowWeWorkCenter from "../../assets/home/How-we-work-center.svg";
 import HowWeWorkRight from "../../assets/home/How-we-work-right.svg";
+import { Link } from "react-router-dom";
 
 const HowWeWork = () => {
   return (
@@ -150,12 +151,14 @@ const HowWeWork = () => {
             </div>
           </div>
           <div className="mt-8">
-            <button
-              aria-label="Join Us"
-              className="h-14 bg-darkblue w-44 rounded-full font-poppins font-medium"
-            >
-              <span className="text-xl text-white">Join Us</span>
-            </button>
+            <Link to={"/contact"}>
+              <button
+                aria-label="Join Us"
+                className="h-12 bg-darkblue w-44 rounded-full font-poppins font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                <span className="text-lg text-white">Join Us</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

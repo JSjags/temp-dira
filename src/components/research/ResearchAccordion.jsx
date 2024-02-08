@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { researchWorks } from "../../constants/researchWorks";
 import accordionArrow from "../../assets/accordion-arrow.svg";
 import arrowRight from "../../assets/arrow-right.svg";
@@ -12,7 +12,10 @@ const researchFields = [
 ];
 
 const ResearchAccordion = () => {
+  const ref = useRef(null);
+
   const [currentAccordion, setCurrentAccordion] = useState(0);
+  const [accordionHeight, setAccordionHeight] = useState(0);
 
   const handleToggle = (index) => {
     if (index === currentAccordion) {
@@ -21,6 +24,12 @@ const ResearchAccordion = () => {
       setCurrentAccordion(index);
     }
   };
+
+  useEffect(() => {
+    if (ref.current !== null) {
+      setAccordionHeight(ref.current.clientHeight);
+    }
+  }, [ref]);
 
   return (
     <div className="w-full bg-white pb-24">
@@ -47,12 +56,14 @@ const ResearchAccordion = () => {
                   </button>
                 </div>
                 <div
+                  ref={ref}
                   className={`flex flex-col gap-10 transition-all duration-300 ${
                     i === currentAccordion
-                      ? "transition-all duration-300"
-                      : "h-0 overflow-hidden transition-all duration-300"
+                      ? `transition-all duration-300 opacity-1 translate-y-0`
+                      : "h-0 overflow-hidden transition-all duration-300 opacity-0 -translate-y-4"
                   }`}
                 >
+                  {console.log(`accordion height: ${accordionHeight}`)}
                   {researchWorks.slice(0, 2).map((work, i) => {
                     return (
                       <div
@@ -63,7 +74,7 @@ const ResearchAccordion = () => {
                           <img
                             loading="lazy"
                             src={work.image}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-xl"
                           />
                         </div>
                         <div className="grid font-dmsans text-lg leading-8 min-w-[240px] flex-1 max-w-[922px] text-lightdark">
@@ -86,9 +97,9 @@ const ResearchAccordion = () => {
                           <div className="self-end">
                             <button
                               aria-label="Read more"
-                              className="h-14 mt-6 bg-transparent w-44 rounded-full font-poppins font-medium border border-lightdark flex justify-center items-center gap-3"
+                              className="h-10 mt-6 bg-transparent w-40 rounded-full font-poppins font-medium border border-lightdark flex justify-center items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                             >
-                              <span className="text-xl text-lightdark">
+                              <span className="text-base text-lightdark">
                                 Read more
                               </span>
                               <img loading="lazy" src={arrowRight} />

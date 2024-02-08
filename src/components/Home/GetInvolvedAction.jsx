@@ -13,7 +13,7 @@ const GetInvolvedAction = () => {
             <div className="mt-14 w-fit mx-auto">
               <button
                 aria-label="Join Us"
-                className="h-14 bg-darkblue w-44 rounded-full font-poppins font-medium"
+                className="h-14 bg-darkblue w-44 rounded-full font-poppins font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <span className="text-lg text-white">Join Us</span>
               </button>
